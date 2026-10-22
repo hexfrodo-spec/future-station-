@@ -1,6 +1,6 @@
 # Future Station
 
-![Future Station](assets/fs-logo-primary-300.png)
+![Future Station](assets/fs-logo-primary.svg)
 
 **Print-on-demand, marketed to millions — without paid ads.**
 
