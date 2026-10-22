@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="Future Station portfolio — print-on-demand design, organic audience marketing, and content monetization. Leadership, proof, audience assets, and our portfolio video. Based in Dhaka, Bangladesh, active since 2021." />
+    <link rel="icon" type="image/png" href="assets/fs-logo-icon-300.png" />
+    <title>Future Station — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --slate-950: #14242f;
+        --slate-900: #1b2f3f;
+        --slate-800: #22384a;
+        --slate-700: #2e4a5e;
+        --teal: #0d93a8;
+        --teal-bright: #2fb3c7;
+        --teal-dark: #0a7285;
+        --bg: #ffffff;
+        --bg-alt: #f2f6f8;
+        --surface: #ffffff;
+        --ink: #1b2f3f;
+        --muted: #51687a;
+        --line: #dce6ec;
+        --header-bg: rgba(255, 255, 255, 0.94);
+        --chip-bg: #e8f4f6;
+        --radius: 14px;
+        --maxw: 1140px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #101d27;
+          --bg-alt: #14242f;
+          --surface: #1b2f3f;
+          --ink: #eef4f7;
+          --muted: #a7bcc9;
+          --line: #2c4456;
+          --header-bg: rgba(16, 29, 39, 0.94);
+          --chip-bg: #17333d;
+        }
+      }
+      * { box-sizing: border-box; }
+      html {
+        scroll-behavior: smooth;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+      }
+      body {
+        margin: 0;
+        font-family: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      img, svg { display: block; }
+      a { color: var(--teal); }
+      .wrap {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      section { scroll-margin-top: 84px; }
+      h1, h2, h3 { line-height: 1.15; letter-spacing: -0.01em; margin: 0; }
+      h2 {
+        font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+        font-weight: 800;
+        color: var(--ink);
+        margin-bottom: 18px;
+      }
+      h3 { font-size: 1.15rem; font-weight: 700; }
+
+      /* ---------- Header ---------- */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: var(--header-bg);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+      .header-inner {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        min-height: 68px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        text-decoration: none;
+        flex-shrink: 0;
+        color: var(--ink);
+      }
+      .brand .wordmark {
+        font-size: 1.22rem;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+      .brand .wordmark em {
+        font-style: normal;
+        color: var(--teal);
+      }
+      nav.main-nav {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      nav.main-nav a {
+        color: var(--ink);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        padding: 8px 12px;
+        border-radius: 8px;
+      }
+      nav.main-nav a:hover { color: var(--teal); }
+      nav.main-nav a.active { color: var(--teal); }
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.98rem;
+        padding: 12px 24px;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        transition: background 0.15s ease, border-color 0.15s ease;
+      }
+      .btn-teal { background: var(--teal); color: #fff; }
+      .btn-teal:hover { background: var(--teal-dark); }
+      .btn-outline {
+        border-color: rgba(255, 255, 255, 0.55);
+        color: #fff;
+        background: transparent;
+      }
+      .btn-outline:hover { border-color: #fff; }
+      .btn-header {
+        margin-left: 14px;
+        padding: 10px 20px;
+        font-size: 0.92rem;
+        white-space: nowrap;
+      }
+      .nav-toggle {
+        display: none;
+        margin-left: auto;
+        background: none;
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
+        padding: 10px;
+      }
+      .nav-toggle span {
+        display: block;
+        height: 2px;
+        background: var(--ink);
+        margin: 4px 0;
+        border-radius: 2px;
+      }
+
+      /* ---------- Hero ---------- */
+      .hero {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(135deg, var(--slate-950) 0%, var(--slate-900) 55%, var(--slate-800) 100%);
+        color: #fff;
+      }
+      .hero-motif {
+        position: absolute;
+        right: -140px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 640px;
+        height: 640px;
+        opacity: 0.16;
+        pointer-events: none;
+      }
+      .hero-inner {
+        position: relative;
+        padding-top: 84px;
+      }
+      .hero h1 {
+        font-size: clamp(2rem, 5.2vw, 3.4rem);
+        font-weight: 800;
+        max-width: 17em;
+        margin-bottom: 20px;
+      }
+      .hero h1 .accent { color: var(--teal-bright); }
+      .hero .sub {
+        font-size: clamp(1.02rem, 1.8vw, 1.2rem);
+        color: #c3d5df;
+        max-width: 44em;
+        margin: 0 0 34px;
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-bottom: 64px;
+      }
+      .proof-strip {
+        position: relative;
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.04);
+      }
+      .proof-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+      }
+      .proof-item {
+        padding: 22px 18px 24px;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .proof-item:first-child { border-left: none; padding-left: 0; }
+      .proof-item .big {
+        display: block;
+        font-size: 1.28rem;
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.25;
+      }
+      .proof-item .small {
+        display: block;
+        font-size: 0.88rem;
+        color: #a9c2d0;
+        margin-top: 3px;
+        line-height: 1.45;
+      }
+
+      /* ---------- Sections ---------- */
+      .section { padding: 84px 0; }
+      .section.alt { background: var(--bg-alt); }
+      .lead { max-width: 52em; color: var(--muted); font-size: 1.05rem; margin: 0 0 16px; }
+      .lead strong { color: var(--ink); }
+
+      .subsection-title {
+        font-size: 1.35rem;
+        font-weight: 800;
+        margin: 52px 0 20px;
+      }
+
+      /* Leadership */
+      .leaders {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .leader-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 28px 24px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .monogram {
+        flex-shrink: 0;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: var(--teal);
+        color: #fff;
+        font-weight: 800;
+        font-size: 1.05rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 0.02em;
+      }
+      .leader-card .name { font-weight: 700; font-size: 1.05rem; line-height: 1.3; }
+      .leader-card .title { color: var(--teal); font-weight: 600; font-size: 0.92rem; }
+
+      /* Services */
+      .services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 36px;
+      }
+      .service-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 30px 26px;
+      }
+      .service-icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 11px;
+        background: var(--chip-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 18px;
+      }
+      .service-card h3 { margin-bottom: 10px; }
+      .service-card p { margin: 0; color: var(--muted); font-size: 0.97rem; }
+
+      /* Results */
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 36px;
+      }
+      .stat-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-top: 3px solid var(--teal);
+        border-radius: var(--radius);
+        padding: 26px 24px;
+      }
+      .stat-card p { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.55; }
+      .stat-card strong {
+        color: var(--ink);
+        font-weight: 800;
+        font-size: 1.12rem;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 6px;
+      }
+      .chip {
+        background: var(--chip-bg);
+        color: var(--ink);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 9px 18px;
+        font-weight: 600;
+        font-size: 0.93rem;
+      }
+      .proof-note {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 24px 26px;
+        color: var(--muted);
+        font-size: 1rem;
+        margin: 0;
+      }
+      .audience-list {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+        margin-bottom: 18px;
+      }
+      .audience-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 13px 26px;
+        border-top: 1px solid var(--line);
+      }
+      .audience-row:first-child { border-top: none; }
+      .audience-row a { font-weight: 700; text-decoration: none; }
+      .audience-row a:hover { text-decoration: underline; }
+      .audience-row .members {
+        color: var(--muted);
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      .audience-total {
+        margin: 0 0 22px;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .brand-logo { height: 44px; width: auto; }
+      .logo-on-dark { display: none; }
+      @media (prefers-color-scheme: dark) {
+        .logo-on-light { display: none; }
+        .logo-on-dark { display: block; }
+      }
+      .footer-logo { height: 40px; width: auto; }
+      .why-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      .why-item {
+        display: flex;
+        gap: 14px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 24px;
+      }
+      .why-item .tick {
+        flex-shrink: 0;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: var(--teal);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2px;
+      }
+      .why-item p { margin: 0; color: var(--muted); font-size: 0.98rem; }
+      .why-item strong { color: var(--ink); }
+
+      /* Contact */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        gap: 44px;
+        margin-top: 8px;
+        align-items: start;
+      }
+      .contact-info p { color: var(--muted); font-size: 1.03rem; margin: 0 0 22px; max-width: 34em; }
+      .contact-detail {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 0;
+        border-top: 1px solid var(--line);
+        font-weight: 600;
+      }
+      .contact-detail .label { color: var(--muted); font-weight: 600; }
+      .contact-form {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 28px;
+      }
+      .field { margin-bottom: 16px; }
+      .field label {
+        display: block;
+        font-weight: 700;
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+      }
+      .field input, .field textarea {
+        width: 100%;
+        font: inherit;
+        font-size: 0.97rem;
+        color: var(--ink);
+        background: var(--bg);
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        padding: 11px 13px;
+      }
+      .field input:focus, .field textarea:focus {
+        outline: 2px solid var(--teal);
+        outline-offset: 1px;
+      }
+      .field textarea { resize: vertical; min-height: 110px; }
+      .btn-submit {
+        width: 100%;
+        background: var(--slate-700);
+        color: #fff;
+        border: none;
+        cursor: not-allowed;
+        opacity: 0.75;
+      }
+      .form-note {
+        margin: 14px 0 0;
+        font-size: 0.9rem;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      /* Footer */
+      footer {
+        background: var(--slate-950);
+        color: #c3d5df;
+        padding: 52px 0 34px;
+      }
+      .footer-top {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 28px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .footer-brand { display: flex; align-items: center; gap: 11px; }
+      .footer-brand .wordmark { font-size: 1.15rem; font-weight: 800; color: #fff; }
+      .footer-brand .wordmark em { font-style: normal; color: var(--teal-bright); }
+      .footer-loc { margin: 10px 0 0; font-size: 0.94rem; color: #8fa9ba; }
+      footer nav { margin-left: auto; display: flex; flex-wrap: wrap; gap: 6px 20px; }
+      footer nav a {
+        color: #c3d5df;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.94rem;
+      }
+      footer nav a:hover { color: var(--teal-bright); }
+      .copyright { margin: 22px 0 0; font-size: 0.88rem; color: #7d99ab; }
+
+      /* ---------- Responsive ---------- */
+      @media (max-width: 900px) {
+        .proof-grid { grid-template-columns: repeat(2, 1fr); }
+        .proof-item { border-left: none; padding-left: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+        .proof-item:nth-child(-n+2) { border-top: none; }
+        .leaders, .services, .stat-grid { grid-template-columns: 1fr; }
+        .why-grid, .contact-grid { grid-template-columns: 1fr; }
+        .hero-motif { width: 420px; height: 420px; right: -160px; opacity: 0.12; }
+      }
+      @media (max-width: 720px) {
+        .nav-toggle { display: block; }
+        nav.main-nav {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: var(--header-bg);
+          backdrop-filter: blur(10px);
+          border-bottom: 1px solid var(--line);
+          flex-direction: column;
+          align-items: stretch;
+          padding: 10px 20px 18px;
+          gap: 2px;
+        }
+        nav.main-nav.open { display: flex; }
+        nav.main-nav a { padding: 11px 10px; }
+        .btn-header { margin: 8px 0 0; text-align: center; }
+        header .wrap { position: relative; }
+        .section { padding: 60px 0; }
+        .hero-inner { padding-top: 56px; }
+        .hero-actions { margin-bottom: 44px; }
+      }
+      @media (max-width: 460px) {
+        .proof-grid { grid-template-columns: 1fr; }
+        .proof-item { border-top: 1px solid rgba(255, 255, 255, 0.1); }
+        .proof-item:first-child { border-top: none; }
+        .proof-item:nth-child(2) { border-top: 1px solid rgba(255, 255, 255, 0.1); }
+        .hero-actions .btn { width: 100%; text-align: center; }
+      }
+    
+      /* Portfolio page extras */
+      .founder-photo { flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--teal); }
+      .video-wrap { max-width: 880px; margin: 36px auto 0; }
+      .video-wrap video { width: 100%; height: auto; display: block; border-radius: var(--radius); border: 1px solid var(--line); background: #000; }
+      .video-actions { margin-top: 18px; display: flex; gap: 14px; flex-wrap: wrap; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap header-inner">
+        <a class="brand" href="index.html" aria-label="Future Station — home">
+          <svg class="brand-logo logo-on-light" viewBox="0 0 976 240" role="img" aria-label="Future Station">
+            <g>
+              <path d="M 89.07 194.87 A 110.0 70.0 -22.0 0 1 14.69 141.64 A 110.0 70.0 -22.0 0 1 89.35 54.96" fill="none" stroke="#274554" stroke-width="10.0"/>
+              <path d="M 150.93 41.13 A 110.0 70.0 -22.0 0 1 225.31 94.36 A 110.0 70.0 -22.0 0 1 150.65 181.04" fill="none" stroke="#274554" stroke-width="10.0"/>
+              <path d="M 92.34 171.17 A 34.0 34.0 0 0 1 147.36 171.17" fill="none" stroke="#00899A" stroke-width="13.0" stroke-linecap="butt"/>
+              <path d="M 72.93 157.06 A 58.0 58.0 0 0 1 166.77 157.06" fill="none" stroke="#00899A" stroke-width="13.0" stroke-linecap="butt"/>
+              <path d="M 53.51 142.95 A 82.0 82.0 0 0 1 186.19 142.95" fill="none" stroke="#00899A" stroke-width="13.0" stroke-linecap="butt"/>
+              <circle cx="120.15" cy="44.85" r="13.5" fill="#00899A"/>
+              <circle cx="119.85" cy="191.15" r="15.0" fill="#274554"/>
+            </g>
+            <g transform="translate(286.00 141.33)">
+              <path d="M432 1181V745H1153V517H432V0H137V1409H1176V1181Z" transform="translate(0.00 0) scale(0.03027 -0.03027)" fill="#274554"/>
+              <path d="M723 -20Q432 -20 277.5 122.0Q123 264 123 528V1409H418V551Q418 384 497.5 297.5Q577 211 731 211Q889 211 974.0 301.5Q1059 392 1059 561V1409H1354V543Q1354 275 1188.5 127.5Q1023 -20 723 -20Z" transform="translate(48.87 0) scale(0.03027 -0.03027)" fill="#274554"/>
+              <path d="M773 1181V0H478V1181H23V1409H1229V1181Z" transform="translate(104.65 0) scale(0.03027 -0.03027)" fill="#274554"/>
+              <path d="M723 -20Q432 -20 277.5 122.0Q123 264 123 528V1409H418V551Q418 384 497.5 297.5Q577 211 731 211Q889 211 974.0 301.5Q1059 392 1059 561V1409H1354V543Q1354 275 1188.5 127.5Q1023 -20 723 -20Z" transform="translate(153.52 0) scale(0.03027 -0.03027)" fill="#274554"/>
+              <path d="M1105 0 778 535H432V0H137V1409H841Q1093 1409 1230.0 1300.5Q1367 1192 1367 989Q1367 841 1283.0 733.5Q1199 626 1056 592L1437 0ZM1070 977Q1070 1180 810 1180H432V764H818Q942 764 1006.0 820.0Q1070 876 1070 977Z" transform="translate(209.29 0) scale(0.03027 -0.03027)" fill="#274554"/>
+              <path d="M137 0V1409H1245V1181H432V827H1184V599H432V228H1286V0Z" transform="translate(265.07 0) scale(0.03027 -0.03027)" fill="#274554"/>
+              <path d="M1286 406Q1286 199 1132.5 89.5Q979 -20 682 -20Q411 -20 257.0 76.0Q103 172 59 367L344 414Q373 302 457.0 251.5Q541 201 690 201Q999 201 999 389Q999 449 963.5 488.0Q928 527 863.5 553.0Q799 579 616 616Q458 653 396.0 675.5Q334 698 284.0 728.5Q234 759 199.0 802.0Q164 845 144.5 903.0Q125 961 125 1036Q125 1227 268.5 1328.5Q412 1430 686 1430Q948 1430 1079.5 1348.0Q1211 1266 1249 1077L963 1038Q941 1129 873.5 1175.0Q806 1221 680 1221Q412 1221 412 1053Q412 998 440.5 963.0Q469 928 525.0 903.5Q581 879 752 842Q955 799 1042.5 762.5Q1130 726 1181.0 677.5Q1232 629 1259.0 561.5Q1286 494 1286 406Z" transform="translate(345.65 0) scale(0.03027 -0.03027)" fill="#274554"/>
+              <path d="M773 1181V0H478V1181H23V1409H1229V1181Z" transform="translate(398.00 0) scale(0.03027 -0.03027)" fill="#274554"/>
+              <path d="M1133 0 1008 360H471L346 0H51L565 1409H913L1425 0ZM739 1192 733 1170Q723 1134 709.0 1088.0Q695 1042 537 582H942L803 987L760 1123Z" transform="translate(446.87 0) scale(0.03027 -0.03027)" fill="#274554"/>
+              <path d="M773 1181V0H478V1181H23V1409H1229V1181Z" transform="translate(502.65 0) scale(0.03027 -0.03027)" fill="#274554"/>
+              <path d="M137 0V1409H432V0Z" transform="translate(551.52 0) scale(0.03027 -0.03027)" fill="#274554"/>
+              <path d="M1507 711Q1507 491 1420.0 324.0Q1333 157 1171.0 68.5Q1009 -20 793 -20Q461 -20 272.5 175.5Q84 371 84 711Q84 1050 272.0 1240.0Q460 1430 795 1430Q1130 1430 1318.5 1238.0Q1507 1046 1507 711ZM1206 711Q1206 939 1098.0 1068.5Q990 1198 795 1198Q597 1198 489.0 1069.5Q381 941 381 711Q381 479 491.5 345.5Q602 212 793 212Q991 212 1098.5 342.0Q1206 472 1206 711Z" transform="translate(579.74 0) scale(0.03027 -0.03027)" fill="#274554"/>
+              <path d="M995 0 381 1085Q399 927 399 831V0H137V1409H474L1097 315Q1079 466 1079 590V1409H1341V0Z" transform="translate(638.97 0) scale(0.03027 -0.03027)" fill="#274554"/>
+            </g>
+          </svg>
+          <svg class="brand-logo logo-on-dark" viewBox="0 0 976 240" role="img" aria-label="Future Station">
+            <g>
+              <path d="M 89.07 194.87 A 110.0 70.0 -22.0 0 1 14.69 141.64 A 110.0 70.0 -22.0 0 1 89.35 54.96" fill="none" stroke="#FFFFFF" stroke-width="10.0"/>
+              <path d="M 150.93 41.13 A 110.0 70.0 -22.0 0 1 225.31 94.36 A 110.0 70.0 -22.0 0 1 150.65 181.04" fill="none" stroke="#FFFFFF" stroke-width="10.0"/>
+              <path d="M 92.34 171.17 A 34.0 34.0 0 0 1 147.36 171.17" fill="none" stroke="#00899A" stroke-width="13.0" stroke-linecap="butt"/>
+              <path d="M 72.93 157.06 A 58.0 58.0 0 0 1 166.77 157.06" fill="none" stroke="#00899A" stroke-width="13.0" stroke-linecap="butt"/>
+              <path d="M 53.51 142.95 A 82.0 82.0 0 0 1 186.19 142.95" fill="none" stroke="#00899A" stroke-width="13.0" stroke-linecap="butt"/>
+              <circle cx="120.15" cy="44.85" r="13.5" fill="#00899A"/>
+              <circle cx="119.85" cy="191.15" r="15.0" fill="#FFFFFF"/>
+            </g>
+            <g transform="translate(286.00 141.33)">
+              <path d="M432 1181V745H1153V517H432V0H137V1409H1176V1181Z" transform="translate(0.00 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+              <path d="M723 -20Q432 -20 277.5 122.0Q123 264 123 528V1409H418V551Q418 384 497.5 297.5Q577 211 731 211Q889 211 974.0 301.5Q1059 392 1059 561V1409H1354V543Q1354 275 1188.5 127.5Q1023 -20 723 -20Z" transform="translate(48.87 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+              <path d="M773 1181V0H478V1181H23V1409H1229V1181Z" transform="translate(104.65 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+              <path d="M723 -20Q432 -20 277.5 122.0Q123 264 123 528V1409H418V551Q418 384 497.5 297.5Q577 211 731 211Q889 211 974.0 301.5Q1059 392 1059 561V1409H1354V543Q1354 275 1188.5 127.5Q1023 -20 723 -20Z" transform="translate(153.52 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+              <path d="M1105 0 778 535H432V0H137V1409H841Q1093 1409 1230.0 1300.5Q1367 1192 1367 989Q1367 841 1283.0 733.5Q1199 626 1056 592L1437 0ZM1070 977Q1070 1180 810 1180H432V764H818Q942 764 1006.0 820.0Q1070 876 1070 977Z" transform="translate(209.29 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+              <path d="M137 0V1409H1245V1181H432V827H1184V599H432V228H1286V0Z" transform="translate(265.07 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+              <path d="M1286 406Q1286 199 1132.5 89.5Q979 -20 682 -20Q411 -20 257.0 76.0Q103 172 59 367L344 414Q373 302 457.0 251.5Q541 201 690 201Q999 201 999 389Q999 449 963.5 488.0Q928 527 863.5 553.0Q799 579 616 616Q458 653 396.0 675.5Q334 698 284.0 728.5Q234 759 199.0 802.0Q164 845 144.5 903.0Q125 961 125 1036Q125 1227 268.5 1328.5Q412 1430 686 1430Q948 1430 1079.5 1348.0Q1211 1266 1249 1077L963 1038Q941 1129 873.5 1175.0Q806 1221 680 1221Q412 1221 412 1053Q412 998 440.5 963.0Q469 928 525.0 903.5Q581 879 752 842Q955 799 1042.5 762.5Q1130 726 1181.0 677.5Q1232 629 1259.0 561.5Q1286 494 1286 406Z" transform="translate(345.65 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+              <path d="M773 1181V0H478V1181H23V1409H1229V1181Z" transform="translate(398.00 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+              <path d="M1133 0 1008 360H471L346 0H51L565 1409H913L1425 0ZM739 1192 733 1170Q723 1134 709.0 1088.0Q695 1042 537 582H942L803 987L760 1123Z" transform="translate(446.87 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+              <path d="M773 1181V0H478V1181H23V1409H1229V1181Z" transform="translate(502.65 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+              <path d="M137 0V1409H432V0Z" transform="translate(551.52 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+              <path d="M1507 711Q1507 491 1420.0 324.0Q1333 157 1171.0 68.5Q1009 -20 793 -20Q461 -20 272.5 175.5Q84 371 84 711Q84 1050 272.0 1240.0Q460 1430 795 1430Q1130 1430 1318.5 1238.0Q1507 1046 1507 711ZM1206 711Q1206 939 1098.0 1068.5Q990 1198 795 1198Q597 1198 489.0 1069.5Q381 941 381 711Q381 479 491.5 345.5Q602 212 793 212Q991 212 1098.5 342.0Q1206 472 1206 711Z" transform="translate(579.74 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+              <path d="M995 0 381 1085Q399 927 399 831V0H137V1409H474L1097 315Q1079 466 1079 590V1409H1341V0Z" transform="translate(638.97 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+            </g>
+          </svg>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#results">Results</a>
+          <a href="portfolio.html" class="active">Portfolio</a>
+          <a href="index.html#contact">Contact</a>
+          <a class="btn btn-teal btn-header" href="index.html#contact">Partner with us</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero" id="top">
+        <svg class="hero-motif" viewBox="0 0 200 200" aria-hidden="true">
+          <g fill="none" stroke="#ffffff" stroke-width="1.4">
+            <ellipse cx="100" cy="100" rx="92" ry="40" transform="rotate(-24 100 100)" />
+            <ellipse cx="100" cy="100" rx="66" ry="28" transform="rotate(-24 100 100)" />
+            <ellipse cx="100" cy="100" rx="40" ry="17" transform="rotate(-24 100 100)" />
+          </g>
+          <g fill="none" stroke="#2fb3c7" stroke-width="2" stroke-linecap="round">
+            <path d="M79 118 A 24 24 0 0 1 121 118" />
+            <path d="M64 118 A 40 40 0 0 1 136 118" />
+            <path d="M49 118 A 56 56 0 0 1 151 118" />
+          </g>
+          <circle cx="100" cy="118" r="4" fill="#2fb3c7" />
+          <circle cx="163" cy="42" r="4" fill="#2fb3c7" />
+          <circle cx="37" cy="158" r="4" fill="#ffffff" />
+        </svg>
+        <div class="wrap hero-inner">
+          <h1>Future Station — <span class="accent">Portfolio</span></h1>
+          <p class="sub">Who we are, what we do, and the results behind the numbers: print-on-demand, organic audience marketing, and content monetization — active since 2021, based in Dhaka, Bangladesh, with an audience concentrated in the United States.</p>
+          <div class="hero-actions">
+            <a class="btn btn-teal" href="#video">Watch the portfolio video</a>
+            <a class="btn btn-outline" href="index.html">Visit our website</a>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="about">
+        <div class="wrap">
+          <h2>Who we are</h2>
+          <p class="lead">Future Station is a print-on-demand and digital marketing company based in Dhaka, Bangladesh, active since 2021. It was founded and is led by Founder &amp; CEO Saiful Islam Shimul, together with Co-founders Bijoy and Tuhin Patowary and a team of 10. We design and sell print-on-demand products, market them organically to audiences we built ourselves, and run content monetization across Facebook, TikTok, YouTube, and Instagram. Our audience is concentrated in the United States.</p>
+          <h3 class="subsection-title">Leadership</h3>
+          <div class="leaders">
+            <div class="leader-card">
+              <img class="founder-photo" src="assets/shimul-headshot.jpg" alt="Saiful Islam Shimul, Founder &amp; CEO of Future Station" />
+              <div>
+                <div class="name">Saiful Islam Shimul</div>
+                <div class="title">Founder &amp; CEO</div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="monogram" aria-hidden="true">B</div>
+              <div>
+                <div class="name">Bijoy</div>
+                <div class="title">Co-founder</div>
+              </div>
+            </div>
+            <div class="leader-card">
+              <div class="monogram" aria-hidden="true">TP</div>
+              <div>
+                <div class="name">Tuhin Patowary</div>
+                <div class="title">Co-founder</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section alt" id="video">
+        <div class="wrap">
+          <h2>Portfolio video</h2>
+          <p class="lead">Our 63-second showreel: who we are, what we do, the proof numbers, the US audience network, and the partnership invitation — English voiceover with captions.</p>
+          <div class="video-wrap">
+            <!-- VIDEO_SRC: temporary hosted copy (link expires). Once future-station-portfolio-video.mp4 is added under assets/ in this repo, change the video src and the download href below to assets/future-station-portfolio-video.mp4 -->
+            <video controls preload="metadata" playsinline src="https://muse.ai/files/1322133000988501/2105208310120662/774l9bycmj0y7wc4oqgrfxox/future-station-portfolio-video.mp4"></video>
+            <div class="video-actions">
+              <a class="btn btn-teal" href="https://muse.ai/files/1322133000988501/2105208310120662/774l9bycmj0y7wc4oqgrfxox/future-station-portfolio-video.mp4" download>Download the video (MP4)</a>
+              <a class="btn btn-outline" href="index.html#results">See the results</a>
+            </div>
+          </div>
+        </div>
+      </section>
+<section class="section alt" id="services">
+        <div class="wrap">
+          <h2>What we do</h2>
+          <div class="services">
+            <div class="service-card">
+              <div class="service-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0d93a8" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" />
+                  <path d="M12 12l8-4.5M12 12v9M12 12L4 7.5" />
+                </svg>
+              </div>
+              <h3>Print-on-demand design &amp; production</h3>
+              <p>Original designs, rigorous quality control, and multi-product catalogs across dozens of niches — apparel, drinkware, home goods, gifts, and seasonal lines. End-to-end POD operations: original design, quality control, transparent print-file preparation, and multi-product catalogs.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0d93a8" stroke-width="1.9" stroke-linecap="round">
+                  <circle cx="12" cy="15.5" r="1.6" fill="#0d93a8" stroke="none" />
+                  <path d="M8.2 15.5a5.4 5.4 0 0 1 7.6 0" />
+                  <path d="M5.4 15.5a9.4 9.4 0 0 1 13.2 0" />
+                  <path d="M2.6 15.5a13.4 13.4 0 0 1 18.8 0" />
+                </svg>
+              </div>
+              <h3>Organic audience marketing</h3>
+              <p>We don't buy reach; we own it. Products are marketed directly to our own Facebook pages and community groups, with content distribution across TikTok, YouTube, and Instagram — giving partners distribution without an ad budget.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0d93a8" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="5" width="18" height="14" rx="3" />
+                  <path d="M10.2 9.3v5.4l4.8-2.7-4.8-2.7z" fill="#0d93a8" stroke="none" />
+                </svg>
+              </div>
+              <h3>Content monetization</h3>
+              <p>Original image and video content produced at scale for monetized social pages, run as a repeatable production system with AI-assisted workflows.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+<section class="section" id="results">
+        <div class="wrap">
+          <h2>Results</h2>
+          <div class="stat-grid">
+            <div class="stat-card">
+              <p><strong>Since 2021</strong> — four years of continuous operation</p>
+            </div>
+            <div class="stat-card">
+              <p><strong>~$100–200K</strong> profit from content monetization</p>
+            </div>
+            <div class="stat-card">
+              <p><strong>$200–300K+</strong> profit from free, organic marketing — zero paid ad spend</p>
+            </div>
+            <div class="stat-card">
+              <p><strong>~5–10M</strong> audience presence in the USA across platforms</p>
+            </div>
+            <div class="stat-card">
+              <p><strong>~4M</strong> USA Facebook audience across 30+ pages and 30–35 groups (individual groups up to ~957K members)</p>
+            </div>
+            <div class="stat-card">
+              <p><strong>Team of 10</strong> across design, marketing, and content production</p>
+            </div>
+          </div>
+
+          <h3 class="subsection-title">Audience network</h3>
+          <p class="lead">Our owned audience network spans dozens of niches with strong US reach, including:</p>
+          <div class="chips">
+            <span class="chip">Animals and pets</span>
+            <span class="chip">Dogs and specific breeds</span>
+            <span class="chip">Cartoons and animated series</span>
+            <span class="chip">TV series fandoms</span>
+            <span class="chip">Sports (NFL teams and fan communities)</span>
+            <span class="chip">Family and memorial themes</span>
+            <span class="chip">Seasonal and holiday products</span>
+            <span class="chip">Evergreen humor and lifestyle</span>
+          </div>
+
+          <h3 class="subsection-title">Proof &amp; assets</h3>
+          <div class="audience-list">
+            <div class="audience-row">
+              <a href="https://www.facebook.com/groups/1943471822837002/" target="_blank" rel="noopener">President Donald J. Trump Supporters</a>
+              <span class="members">965K members</span>
+            </div>
+            <div class="audience-row">
+              <a href="https://www.facebook.com/groups/677232981163531/" target="_blank" rel="noopener">Stitch Lovers</a>
+              <span class="members">544K members</span>
+            </div>
+            <div class="audience-row">
+              <a href="https://www.facebook.com/groups/4297352390303094/" target="_blank" rel="noopener">I miss my Mother</a>
+              <span class="members">218K members</span>
+            </div>
+            <div class="audience-row">
+              <a href="https://www.facebook.com/groups/imissmybestdad/" target="_blank" rel="noopener">I Miss My DAD</a>
+              <span class="members">181K members</span>
+            </div>
+            <div class="audience-row">
+              <a href="https://www.facebook.com/groups/990881275486833/" target="_blank" rel="noopener">Kansas City Chiefs !!!</a>
+              <span class="members">99K members</span>
+            </div>
+            <div class="audience-row">
+              <a href="https://www.facebook.com/groups/1071169257584817/" target="_blank" rel="noopener">I Love Eeyore</a>
+              <span class="members">92K members</span>
+            </div>
+            <div class="audience-row">
+              <a href="https://www.facebook.com/groups/1370780907371715/" target="_blank" rel="noopener">Bills Mafia Nation</a>
+              <span class="members">18K members</span>
+            </div>
+          </div>
+          <p class="audience-total">≈2.12M members across these 7 communities — a sample of the wider network; more communities are being added.</p>
+          <p class="proof-note">Detailed payout records (2023 onwards) and audience asset links are available to qualified partners on request.</p>
+
+          <h3 class="subsection-title">Why partner with us</h3>
+          <div class="why-grid">
+            <div class="why-item">
+              <div class="tick" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.2 5L20 6.5" /></svg>
+              </div>
+              <p><strong>Distribution is already built</strong> — partners get access to a multi-million-person US audience without paying for ads.</p>
+            </div>
+            <div class="why-item">
+              <div class="tick" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.2 5L20 6.5" /></svg>
+              </div>
+              <p><strong>Proven without paid media</strong> — our profits come from organic marketing and monetization, a cost structure most competitors cannot match.</p>
+            </div>
+            <div class="why-item">
+              <div class="tick" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.2 5L20 6.5" /></svg>
+              </div>
+              <p><strong>Production capacity in-house</strong> — a 10-person team plus AI-assisted systems means design and content volume can scale quickly for joint campaigns.</p>
+            </div>
+            <div class="why-item">
+              <div class="tick" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.2 5L20 6.5" /></svg>
+              </div>
+              <p><strong>Open to multiple structures</strong> — distribution partnerships, collaborative product lines, team-based service work, and investment conversations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section alt" id="contact">
+        <div class="wrap">
+          <h2>Work with us</h2>
+          <p class="lead">We are open to distribution partnerships, collaborative product lines, team-based service work, and investment conversations.</p>
+          <div class="contact-detail">
+            <span>Future Station — Dhaka, Bangladesh</span>
+          </div>
+          <div class="contact-detail">
+            <span><span class="label">Email:</span> coming soon</span>
+          </div>
+          <div class="hero-actions" style="margin-top: 26px;">
+            <a class="btn btn-teal" href="index.html#contact">Partner with us</a>
+            <a class="btn btn-outline" href="index.html">Back to the website</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap">
+        <div class="footer-top">
+          <div>
+            <div class="footer-brand">
+              <svg class="footer-logo" viewBox="0 0 976 240" role="img" aria-label="Future Station">
+                <g>
+                  <path d="M 89.07 194.87 A 110.0 70.0 -22.0 0 1 14.69 141.64 A 110.0 70.0 -22.0 0 1 89.35 54.96" fill="none" stroke="#FFFFFF" stroke-width="10.0"/>
+                  <path d="M 150.93 41.13 A 110.0 70.0 -22.0 0 1 225.31 94.36 A 110.0 70.0 -22.0 0 1 150.65 181.04" fill="none" stroke="#FFFFFF" stroke-width="10.0"/>
+                  <path d="M 92.34 171.17 A 34.0 34.0 0 0 1 147.36 171.17" fill="none" stroke="#00899A" stroke-width="13.0" stroke-linecap="butt"/>
+                  <path d="M 72.93 157.06 A 58.0 58.0 0 0 1 166.77 157.06" fill="none" stroke="#00899A" stroke-width="13.0" stroke-linecap="butt"/>
+                  <path d="M 53.51 142.95 A 82.0 82.0 0 0 1 186.19 142.95" fill="none" stroke="#00899A" stroke-width="13.0" stroke-linecap="butt"/>
+                  <circle cx="120.15" cy="44.85" r="13.5" fill="#00899A"/>
+                  <circle cx="119.85" cy="191.15" r="15.0" fill="#FFFFFF"/>
+                </g>
+                <g transform="translate(286.00 141.33)">
+                  <path d="M432 1181V745H1153V517H432V0H137V1409H1176V1181Z" transform="translate(0.00 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+                  <path d="M723 -20Q432 -20 277.5 122.0Q123 264 123 528V1409H418V551Q418 384 497.5 297.5Q577 211 731 211Q889 211 974.0 301.5Q1059 392 1059 561V1409H1354V543Q1354 275 1188.5 127.5Q1023 -20 723 -20Z" transform="translate(48.87 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+                  <path d="M773 1181V0H478V1181H23V1409H1229V1181Z" transform="translate(104.65 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+                  <path d="M723 -20Q432 -20 277.5 122.0Q123 264 123 528V1409H418V551Q418 384 497.5 297.5Q577 211 731 211Q889 211 974.0 301.5Q1059 392 1059 561V1409H1354V543Q1354 275 1188.5 127.5Q1023 -20 723 -20Z" transform="translate(153.52 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+                  <path d="M1105 0 778 535H432V0H137V1409H841Q1093 1409 1230.0 1300.5Q1367 1192 1367 989Q1367 841 1283.0 733.5Q1199 626 1056 592L1437 0ZM1070 977Q1070 1180 810 1180H432V764H818Q942 764 1006.0 820.0Q1070 876 1070 977Z" transform="translate(209.29 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+                  <path d="M137 0V1409H1245V1181H432V827H1184V599H432V228H1286V0Z" transform="translate(265.07 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+                  <path d="M1286 406Q1286 199 1132.5 89.5Q979 -20 682 -20Q411 -20 257.0 76.0Q103 172 59 367L344 414Q373 302 457.0 251.5Q541 201 690 201Q999 201 999 389Q999 449 963.5 488.0Q928 527 863.5 553.0Q799 579 616 616Q458 653 396.0 675.5Q334 698 284.0 728.5Q234 759 199.0 802.0Q164 845 144.5 903.0Q125 961 125 1036Q125 1227 268.5 1328.5Q412 1430 686 1430Q948 1430 1079.5 1348.0Q1211 1266 1249 1077L963 1038Q941 1129 873.5 1175.0Q806 1221 680 1221Q412 1221 412 1053Q412 998 440.5 963.0Q469 928 525.0 903.5Q581 879 752 842Q955 799 1042.5 762.5Q1130 726 1181.0 677.5Q1232 629 1259.0 561.5Q1286 494 1286 406Z" transform="translate(345.65 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+                  <path d="M773 1181V0H478V1181H23V1409H1229V1181Z" transform="translate(398.00 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+                  <path d="M1133 0 1008 360H471L346 0H51L565 1409H913L1425 0ZM739 1192 733 1170Q723 1134 709.0 1088.0Q695 1042 537 582H942L803 987L760 1123Z" transform="translate(446.87 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+                  <path d="M773 1181V0H478V1181H23V1409H1229V1181Z" transform="translate(502.65 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+                  <path d="M137 0V1409H432V0Z" transform="translate(551.52 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+                  <path d="M1507 711Q1507 491 1420.0 324.0Q1333 157 1171.0 68.5Q1009 -20 793 -20Q461 -20 272.5 175.5Q84 371 84 711Q84 1050 272.0 1240.0Q460 1430 795 1430Q1130 1430 1318.5 1238.0Q1507 1046 1507 711ZM1206 711Q1206 939 1098.0 1068.5Q990 1198 795 1198Q597 1198 489.0 1069.5Q381 941 381 711Q381 479 491.5 345.5Q602 212 793 212Q991 212 1098.5 342.0Q1206 472 1206 711Z" transform="translate(579.74 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+                  <path d="M995 0 381 1085Q399 927 399 831V0H137V1409H474L1097 315Q1079 466 1079 590V1409H1341V0Z" transform="translate(638.97 0) scale(0.03027 -0.03027)" fill="#FFFFFF"/>
+                </g>
+              </svg>
+            </div>
+            <p class="footer-loc">Dhaka, Bangladesh</p>
+          </div>
+          <nav aria-label="Footer navigation">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#results">Results</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="index.html#contact">Contact</a>
+          </nav>
+        </div>
+        <p class="copyright">© 2026 Future Station. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        var toggle = document.getElementById("navToggle");
+        var nav = document.getElementById("mainNav");
+        toggle.addEventListener("click", function () {
+          var open = nav.classList.toggle("open");
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+        nav.addEventListener("click", function (e) {
+          if (e.target.tagName === "A") {
+            nav.classList.remove("open");
+            toggle.setAttribute("aria-expanded", "false");
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
